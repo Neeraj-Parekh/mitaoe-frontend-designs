@@ -1,0 +1,83 @@
+/* Ultra Lobster Soft Theme */
+
+:root {
+  /* Background colors */
+  --ultra-body-bg: #fefefe;
+  --ultra-card-bg: rgba(255, 255, 255, 0.8);
+  --ultra-header-bg: rgba(255, 255, 255, 0.6);
+  --ultra-sidebar-bg: rgba(248, 250, 252, 0.8);
+  --ultra-muted-bg: rgba(241, 245, 249, 0.8);
+  --ultra-hover-bg: rgba(129, 140, 248, 0.03);
+  
+  /* Text colors */
+  --ultra-text-primary: #475569;
+  --ultra-text-secondary: #64748b;
+  --ultra-text-muted: #94a3b8;
+  
+  /* Border colors */
+  --ultra-border-color: rgba(226, 232, 240, 0.5);
+  --ultra-border-color-light: rgba(248, 250, 252, 0.5);
+  
+  /* Accent colors */
+  --ultra-accent-color: #a5b4fc;
+  --ultra-accent-text: #1e293b;
+  --ultra-secondary-color: #c4b5fd;
+  --ultra-secondary-text: #1e293b;
+  
+  /* Extra soft borders */
+  --ultra-border-radius: 24px;
+  --ultra-border-radius-small: 16px;
+  --ultra-border-radius-large: 32px;
+  
+  /* Soft shadows */
+  --ultra-shadow-sm: 0 2px 20px rgba(0, 0, 0, 0.03);
+  --ultra-shadow-md: 0 8px 40px rgba(0, 0, 0, 0.04);
+  --ultra-shadow-lg: 0 16px 60px rgba(0, 0, 0, 0.05);
+  --ultra-shadow-xl: 0 24px 80px rgba(0, 0, 0, 0.06);
+  
+  /* Soft gradients */
+  --ultra-accent-gradient: linear-gradient(135deg, #a5b4fc 0%, #c4b5fd 100%);
+  --ultra-secondary-gradient: linear-gradient(135deg, #fed7aa 0%, #fde68a 100%);
+  --ultra-muted-gradient: linear-gradient(135deg, rgba(241, 245, 249, 0.8) 0%, rgba(248, 250, 252, 0.8) 100%);
+  --ultra-success-gradient: linear-gradient(135deg, #bbf7d0 0%, #86efac 100%);
+  --ultra-info-gradient: linear-gradient(135deg, #bfdbfe 0%, #93c5fd 100%);
+  --ultra-warning-gradient: linear-gradient(135deg, #fed7aa 0%, #fde68a 100%);
+  --ultra-danger-gradient: linear-gradient(135deg, #fecaca 0%, #fca5a5 100%);
+  
+  /* Status text colors */
+  --ultra-success-text: #065f46;
+  --ultra-info-text: #1e3a8a;
+  --ultra-warning-text: #92400e;
+  --ultra-danger-text: #991b1b;
+  
+  /* Soft background pattern */
+  --ultra-bg-pattern: radial-gradient(circle at 25% 25%, rgba(165, 180, 252, 0.05) 0%, transparent 50%),
+                      radial-gradient(circle at 75% 75%, rgba(196, 181, 253, 0.05) 0%, transparent 50%);
+}
+
+body {
+  background: var(--ultra-body-bg) !important;
+  background-image: var(--ultra-bg-pattern) !important;
+  color: var(--ultra-text-primary) !important;
+  font-weight: 300 !important;
+}
+
+/* Soft effects */
+.card, .block, .course-content, .section {
+  backdrop-filter: blur(20px) !important;
+  border: 1px solid rgba(255, 255, 255, 0.2) !important;
+}
+
+.card:hover, .block:hover {
+  backdrop-filter: blur(30px) !important;
+  transform: translateY(-8px) !important;
+}
+
+.btn, button, input[type="submit"], input[type="button"] {
+  backdrop-filter: blur(10px) !important;
+  font-weight: 400 !important;
+}
+
+input, textarea, select {
+  backdrop-filter: blur(10px) !important;
+}

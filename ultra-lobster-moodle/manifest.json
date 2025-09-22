@@ -1,0 +1,47 @@
+{
+  "manifest_version": 3,
+  "name": "Ultra Lobster for Moodle",
+  "version": "1.0.0",
+  "description": "Transform your Moodle LMS experience with the Ultra Lobster theme - modern, card-based UI with multiple variants",
+  "permissions": [
+    "storage",
+    "activeTab"
+  ],
+  "host_permissions": [
+    "*://moodle.mitaoe.ac.in/*"
+  ],
+  "content_scripts": [
+    {
+      "matches": ["*://moodle.mitaoe.ac.in/*"],
+      "css": [
+        "styles/base.css",
+        "styles/components.css",
+        "styles/themes/light.css"
+      ],
+      "js": [
+        "scripts/theme-manager.js",
+        "scripts/content-script.js"
+      ],
+      "run_at": "document_start"
+    }
+  ],
+  "action": {
+    "default_popup": "popup/popup.html",
+    "default_title": "Ultra Lobster Theme Settings"
+  },
+  "icons": {
+    "16": "icons/icon-16.png",
+    "32": "icons/icon-32.png",
+    "48": "icons/icon-48.png",
+    "128": "icons/icon-128.png"
+  },
+  "web_accessible_resources": [
+    {
+      "resources": [
+        "styles/*",
+        "assets/*"
+      ],
+      "matches": ["*://moodle.mitaoe.ac.in/*"]
+    }
+  ]
+}
