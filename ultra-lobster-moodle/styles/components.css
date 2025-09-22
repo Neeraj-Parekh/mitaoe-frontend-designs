@@ -1,0 +1,251 @@
+/* Ultra Lobster for Moodle - Component Styles */
+
+/* Header and Navigation */
+#page-header {
+  background: var(--ultra-header-bg) !important;
+  backdrop-filter: blur(20px) !important;
+  border-bottom: 1px solid var(--ultra-border-color) !important;
+  box-shadow: var(--ultra-shadow-sm) !important;
+}
+
+.navbar-brand {
+  font-weight: var(--ultra-font-weight-bold) !important;
+  font-size: var(--ultra-font-size-xl) !important;
+}
+
+/* Course cards */
+.course-content .section {
+  background: var(--ultra-card-bg) !important;
+  margin-bottom: var(--ultra-spacing-lg) !important;
+  border: 1px solid var(--ultra-border-color) !important;
+}
+
+.course-content .section .content {
+  padding: var(--ultra-spacing-lg) !important;
+}
+
+.course-content .section .section-title {
+  background: var(--ultra-accent-gradient) !important;
+  color: var(--ultra-accent-text) !important;
+  padding: var(--ultra-spacing-md) var(--ultra-spacing-lg) !important;
+  margin: 0 !important;
+  font-weight: var(--ultra-font-weight-semibold) !important;
+}
+
+/* Activity cards */
+.activity {
+  background: var(--ultra-card-bg) !important;
+  border: 1px solid var(--ultra-border-color) !important;
+  border-radius: var(--ultra-border-radius) !important;
+  margin-bottom: var(--ultra-spacing-md) !important;
+  padding: var(--ultra-spacing-md) !important;
+  transition: var(--ultra-transition-normal) !important;
+}
+
+.activity:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--ultra-shadow-lg);
+  border-color: var(--ultra-accent-color);
+}
+
+.activity .activityname {
+  font-weight: var(--ultra-font-weight-medium) !important;
+  color: var(--ultra-text-primary) !important;
+}
+
+/* Blocks sidebar */
+.block {
+  background: var(--ultra-card-bg) !important;
+  border: 1px solid var(--ultra-border-color) !important;
+  margin-bottom: var(--ultra-spacing-md) !important;
+}
+
+.block .header {
+  background: var(--ultra-secondary-gradient) !important;
+  color: var(--ultra-secondary-text) !important;
+  padding: var(--ultra-spacing-sm) var(--ultra-spacing-md) !important;
+}
+
+.block .content {
+  padding: var(--ultra-spacing-md) !important;
+}
+
+/* Forum and discussion improvements */
+.forumpost {
+  background: var(--ultra-card-bg) !important;
+  border: 1px solid var(--ultra-border-color) !important;
+  border-radius: var(--ultra-border-radius-large) !important;
+  margin-bottom: var(--ultra-spacing-lg) !important;
+  overflow: hidden !important;
+}
+
+.forumpost .header {
+  background: var(--ultra-muted-gradient) !important;
+  padding: var(--ultra-spacing-md) !important;
+}
+
+.forumpost .content {
+  padding: var(--ultra-spacing-lg) !important;
+}
+
+/* Quiz and assignment improvements */
+.que {
+  background: var(--ultra-card-bg) !important;
+  border: 1px solid var(--ultra-border-color) !important;
+  border-radius: var(--ultra-border-radius-large) !important;
+  margin-bottom: var(--ultra-spacing-lg) !important;
+  padding: var(--ultra-spacing-lg) !important;
+}
+
+.que .qtext {
+  font-size: var(--ultra-font-size-lg) !important;
+  line-height: 1.6 !important;
+  margin-bottom: var(--ultra-spacing-md) !important;
+}
+
+/* Table improvements */
+table {
+  border-radius: var(--ultra-border-radius) !important;
+  overflow: hidden !important;
+  box-shadow: var(--ultra-shadow-sm) !important;
+}
+
+table th {
+  background: var(--ultra-accent-gradient) !important;
+  color: var(--ultra-accent-text) !important;
+  font-weight: var(--ultra-font-weight-semibold) !important;
+  padding: var(--ultra-spacing-md) !important;
+}
+
+table td {
+  padding: var(--ultra-spacing-md) !important;
+  border-bottom: 1px solid var(--ultra-border-color) !important;
+}
+
+table tr:hover {
+  background: var(--ultra-hover-bg) !important;
+}
+
+/* Breadcrumb improvements */
+.breadcrumb {
+  background: var(--ultra-card-bg) !important;
+  border: 1px solid var(--ultra-border-color) !important;
+  padding: var(--ultra-spacing-sm) var(--ultra-spacing-md) !important;
+  margin-bottom: var(--ultra-spacing-lg) !important;
+}
+
+.breadcrumb a {
+  color: var(--ultra-accent-color) !important;
+  font-weight: var(--ultra-font-weight-medium) !important;
+}
+
+/* Notification improvements */
+.alert, .notification {
+  border-radius: var(--ultra-border-radius) !important;
+  border: none !important;
+  padding: var(--ultra-spacing-md) var(--ultra-spacing-lg) !important;
+  margin-bottom: var(--ultra-spacing-md) !important;
+  font-weight: var(--ultra-font-weight-medium) !important;
+}
+
+.alert-success {
+  background: var(--ultra-success-gradient) !important;
+  color: var(--ultra-success-text) !important;
+}
+
+.alert-info {
+  background: var(--ultra-info-gradient) !important;
+  color: var(--ultra-info-text) !important;
+}
+
+.alert-warning {
+  background: var(--ultra-warning-gradient) !important;
+  color: var(--ultra-warning-text) !important;
+}
+
+.alert-danger {
+  background: var(--ultra-danger-gradient) !important;
+  color: var(--ultra-danger-text) !important;
+}
+
+/* Progress bars */
+.progress {
+  background: var(--ultra-muted-bg) !important;
+  border-radius: var(--ultra-border-radius) !important;
+  overflow: hidden !important;
+  height: 8px !important;
+}
+
+.progress-bar {
+  background: var(--ultra-accent-gradient) !important;
+  transition: var(--ultra-transition-slow) !important;
+}
+
+/* Modal improvements */
+.modal-content {
+  background: var(--ultra-card-bg) !important;
+  border: 1px solid var(--ultra-border-color) !important;
+  border-radius: var(--ultra-border-radius-large) !important;
+  box-shadow: var(--ultra-shadow-xl) !important;
+}
+
+.modal-header {
+  background: var(--ultra-accent-gradient) !important;
+  color: var(--ultra-accent-text) !important;
+  border-bottom: none !important;
+  padding: var(--ultra-spacing-lg) !important;
+}
+
+.modal-body {
+  padding: var(--ultra-spacing-lg) !important;
+}
+
+/* File manager improvements */
+.filemanager, .filepicker {
+  border-radius: var(--ultra-border-radius-large) !important;
+  border: 1px solid var(--ultra-border-color) !important;
+  background: var(--ultra-card-bg) !important;
+}
+
+.filemanager .fp-content {
+  background: transparent !important;
+}
+
+/* Calendar improvements */
+.calendar-month table {
+  background: var(--ultra-card-bg) !important;
+}
+
+.calendar-month .dayblank {
+  background: var(--ultra-muted-bg) !important;
+}
+
+.calendar-month .today {
+  background: var(--ultra-accent-gradient) !important;
+  color: var(--ultra-accent-text) !important;
+  font-weight: var(--ultra-font-weight-bold) !important;
+}
+
+/* Search improvements */
+.simplesearchform {
+  background: var(--ultra-card-bg) !important;
+  border: 1px solid var(--ultra-border-color) !important;
+  border-radius: var(--ultra-border-radius) !important;
+  padding: var(--ultra-spacing-sm) !important;
+}
+
+/* Loading animations */
+@keyframes ultra-pulse {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.6; }
+}
+
+.loading {
+  animation: ultra-pulse 2s infinite;
+}
+
+/* Enhanced focus states */
+*:focus {
+  outline: 2px solid var(--ultra-accent-color) !important;
+  outline-offset: 2px !important;
+}

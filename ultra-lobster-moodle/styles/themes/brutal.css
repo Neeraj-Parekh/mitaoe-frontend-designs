@@ -1,0 +1,87 @@
+/* Ultra Lobster Brutal Theme */
+
+:root {
+  /* Background colors */
+  --ultra-body-bg: #ffffff;
+  --ultra-card-bg: #ffffff;
+  --ultra-header-bg: #000000;
+  --ultra-sidebar-bg: #f5f5f5;
+  --ultra-muted-bg: #e5e5e5;
+  --ultra-hover-bg: rgba(0, 0, 0, 0.05);
+  
+  /* Text colors */
+  --ultra-text-primary: #000000;
+  --ultra-text-secondary: #404040;
+  --ultra-text-muted: #808080;
+  
+  /* Border colors */
+  --ultra-border-color: #000000;
+  --ultra-border-color-light: #e5e5e5;
+  
+  /* Accent colors */
+  --ultra-accent-color: #000000;
+  --ultra-accent-text: #ffffff;
+  --ultra-secondary-color: #ff0000;
+  --ultra-secondary-text: #ffffff;
+  
+  /* Sharp borders for brutal effect */
+  --ultra-border-radius: 0px;
+  --ultra-border-radius-small: 0px;
+  --ultra-border-radius-large: 0px;
+  
+  /* Shadows */
+  --ultra-shadow-sm: 4px 4px 0px #000000;
+  --ultra-shadow-md: 6px 6px 0px #000000;
+  --ultra-shadow-lg: 8px 8px 0px #000000;
+  --ultra-shadow-xl: 12px 12px 0px #000000;
+  
+  /* Solid gradients */
+  --ultra-accent-gradient: #000000;
+  --ultra-secondary-gradient: #ff0000;
+  --ultra-muted-gradient: #f5f5f5;
+  --ultra-success-gradient: #00ff00;
+  --ultra-info-gradient: #0000ff;
+  --ultra-warning-gradient: #ffff00;
+  --ultra-danger-gradient: #ff0000;
+  
+  /* Status text colors */
+  --ultra-success-text: #000000;
+  --ultra-info-text: #ffffff;
+  --ultra-warning-text: #000000;
+  --ultra-danger-text: #ffffff;
+  
+  /* No background pattern */
+  --ultra-bg-pattern: none;
+}
+
+body {
+  background: var(--ultra-body-bg) !important;
+  color: var(--ultra-text-primary) !important;
+  font-family: 'Courier New', monospace !important;
+  font-weight: bold !important;
+}
+
+/* Brutal style overrides */
+.card, .block, .course-content, .section {
+  border: 3px solid #000000 !important;
+  background: #ffffff !important;
+}
+
+.card:hover, .block:hover {
+  transform: translate(-2px, -2px) !important;
+}
+
+.btn, button, input[type="submit"], input[type="button"] {
+  border: 3px solid #000000 !important;
+  background: #ffffff !important;
+  color: #000000 !important;
+  font-weight: bold !important;
+  text-transform: uppercase !important;
+  letter-spacing: 1px !important;
+}
+
+.btn:hover, button:hover {
+  background: #000000 !important;
+  color: #ffffff !important;
+  transform: translate(-2px, -2px) !important;
+}

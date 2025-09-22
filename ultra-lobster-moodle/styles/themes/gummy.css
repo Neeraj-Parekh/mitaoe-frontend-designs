@@ -1,0 +1,65 @@
+/* Ultra Lobster Gummy Theme */
+
+:root {
+  /* Background colors */
+  --ultra-body-bg: #fef7f0;
+  --ultra-card-bg: #ffffff;
+  --ultra-header-bg: rgba(255, 255, 255, 0.9);
+  --ultra-sidebar-bg: #fef3ec;
+  --ultra-muted-bg: #fed7aa;
+  --ultra-hover-bg: rgba(251, 146, 60, 0.1);
+  
+  /* Text colors */
+  --ultra-text-primary: #9a3412;
+  --ultra-text-secondary: #c2410c;
+  --ultra-text-muted: #ea580c;
+  
+  /* Border colors */
+  --ultra-border-color: #fed7aa;
+  --ultra-border-color-light: #fef3ec;
+  
+  /* Accent colors */
+  --ultra-accent-color: #fb923c;
+  --ultra-accent-text: #ffffff;
+  --ultra-secondary-color: #f97316;
+  --ultra-secondary-text: #ffffff;
+  
+  /* Enhanced border radius for gummy effect */
+  --ultra-border-radius: 20px;
+  --ultra-border-radius-small: 12px;
+  --ultra-border-radius-large: 24px;
+  
+  /* Gradients */
+  --ultra-accent-gradient: linear-gradient(135deg, #fb923c 0%, #f97316 100%);
+  --ultra-secondary-gradient: linear-gradient(135deg, #fbbf24 0%, #f59e0b 100%);
+  --ultra-muted-gradient: linear-gradient(135deg, #fed7aa 0%, #fef3ec 100%);
+  --ultra-success-gradient: linear-gradient(135deg, #4ade80 0%, #22c55e 100%);
+  --ultra-info-gradient: linear-gradient(135deg, #60a5fa 0%, #3b82f6 100%);
+  --ultra-warning-gradient: linear-gradient(135deg, #fbbf24 0%, #f59e0b 100%);
+  --ultra-danger-gradient: linear-gradient(135deg, #fb7185 0%, #f43f5e 100%);
+  
+  /* Status text colors */
+  --ultra-success-text: #ffffff;
+  --ultra-info-text: #ffffff;
+  --ultra-warning-text: #ffffff;
+  --ultra-danger-text: #ffffff;
+  
+  /* Background gradient */
+  --ultra-bg-pattern: radial-gradient(circle at 25% 25%, rgba(251, 146, 60, 0.2) 0%, transparent 50%),
+                      radial-gradient(circle at 75% 75%, rgba(249, 115, 22, 0.2) 0%, transparent 50%);
+}
+
+body {
+  background: var(--ultra-body-bg) !important;
+  background-image: var(--ultra-bg-pattern) !important;
+  color: var(--ultra-text-primary) !important;
+}
+
+/* Enhanced gummy effects */
+.card, .block, .course-content, .section {
+  box-shadow: 0 8px 32px rgba(251, 146, 60, 0.2) !important;
+}
+
+.card:hover, .block:hover {
+  box-shadow: 0 16px 48px rgba(251, 146, 60, 0.3) !important;
+}

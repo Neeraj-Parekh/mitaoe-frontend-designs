@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ultra Lobster Settings</title>
+  <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+  <div class="ultra-popup">
+    <header class="ultra-popup-header">
+      <div class="ultra-logo">
+        <div class="ultra-logo-icon">🦞</div>
+        <h1>Ultra Lobster</h1>
+      </div>
+      <p class="ultra-subtitle">Transform your Moodle experience</p>
+    </header>
+
+    <main class="ultra-popup-content">
+      <section class="ultra-theme-section">
+        <h2>Theme Variants</h2>
+        <div class="ultra-theme-grid">
+          <div class="ultra-theme-option" data-theme="light">
+            <div class="ultra-theme-preview ultra-theme-light"></div>
+            <span class="ultra-theme-name">Light</span>
+          </div>
+          <div class="ultra-theme-option" data-theme="dark">
+            <div class="ultra-theme-preview ultra-theme-dark"></div>
+            <span class="ultra-theme-name">Dark</span>
+          </div>
+          <div class="ultra-theme-option" data-theme="gummy">
+            <div class="ultra-theme-preview ultra-theme-gummy"></div>
+            <span class="ultra-theme-name">Gummy</span>
+          </div>
+          <div class="ultra-theme-option" data-theme="brutal">
+            <div class="ultra-theme-preview ultra-theme-brutal"></div>
+            <span class="ultra-theme-name">Brutal</span>
+          </div>
+          <div class="ultra-theme-option" data-theme="soft">
+            <div class="ultra-theme-preview ultra-theme-soft"></div>
+            <span class="ultra-theme-name">Soft</span>
+          </div>
+        </div>
+      </section>
+
+      <section class="ultra-settings-section">
+        <h2>Settings</h2>
+        <div class="ultra-setting">
+          <label class="ultra-toggle">
+            <input type="checkbox" id="enableAnimations" checked>
+            <span class="ultra-toggle-slider"></span>
+            Enable animations
+          </label>
+        </div>
+        <div class="ultra-setting">
+          <label class="ultra-toggle">
+            <input type="checkbox" id="enableEnhancedTypography" checked>
+            <span class="ultra-toggle-slider"></span>
+            Enhanced typography
+          </label>
+        </div>
+        <div class="ultra-setting">
+          <label class="ultra-toggle">
+            <input type="checkbox" id="enableCardHover" checked>
+            <span class="ultra-toggle-slider"></span>
+            Card hover effects
+          </label>
+        </div>
+      </section>
+
+      <section class="ultra-info-section">
+        <div class="ultra-status">
+          <div class="ultra-status-indicator active"></div>
+          <span>Active on moodle.mitaoe.ac.in</span>
+        </div>
+        <div class="ultra-actions">
+          <button id="resetSettings" class="ultra-button ultra-button-secondary">
+            Reset Settings
+          </button>
+          <button id="openMoodle" class="ultra-button ultra-button-primary">
+            Open Moodle
+          </button>
+        </div>
+      </section>
+    </main>
+
+    <footer class="ultra-popup-footer">
+      <div class="ultra-version">v1.0.0</div>
+      <div class="ultra-links">
+        <a href="#" id="helpLink">Help</a>
+        <a href="#" id="feedbackLink">Feedback</a>
+      </div>
+    </footer>
+  </div>
+
+  <script src="popup.js"></script>
+</body>
+</html>

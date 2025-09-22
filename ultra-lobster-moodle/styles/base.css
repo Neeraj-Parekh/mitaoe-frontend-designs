@@ -1,0 +1,147 @@
+/* Ultra Lobster for Moodle - Base Styles */
+
+:root {
+  /* Base spacing and sizing */
+  --ultra-border-radius: 12px;
+  --ultra-border-radius-small: 8px;
+  --ultra-border-radius-large: 16px;
+  --ultra-spacing-xs: 4px;
+  --ultra-spacing-sm: 8px;
+  --ultra-spacing-md: 16px;
+  --ultra-spacing-lg: 24px;
+  --ultra-spacing-xl: 32px;
+  
+  /* Typography */
+  --ultra-font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  --ultra-font-size-sm: 0.875rem;
+  --ultra-font-size-base: 1rem;
+  --ultra-font-size-lg: 1.125rem;
+  --ultra-font-size-xl: 1.25rem;
+  --ultra-font-size-2xl: 1.5rem;
+  --ultra-font-weight-normal: 400;
+  --ultra-font-weight-medium: 500;
+  --ultra-font-weight-semibold: 600;
+  --ultra-font-weight-bold: 700;
+  
+  /* Shadows and effects */
+  --ultra-shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+  --ultra-shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+  --ultra-shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+  --ultra-shadow-xl: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+  
+  /* Transitions */
+  --ultra-transition-fast: all 0.15s ease-out;
+  --ultra-transition-normal: all 0.25s ease-out;
+  --ultra-transition-slow: all 0.4s ease-out;
+}
+
+/* Reset and base improvements */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: var(--ultra-font-family) !important;
+  line-height: 1.6 !important;
+  transition: var(--ultra-transition-normal) !important;
+}
+
+/* Improve Moodle's default typography */
+h1, h2, h3, h4, h5, h6 {
+  font-weight: var(--ultra-font-weight-semibold) !important;
+  line-height: 1.4 !important;
+  margin-bottom: var(--ultra-spacing-md) !important;
+}
+
+/* Enhanced link styles */
+a {
+  text-decoration: none !important;
+  transition: var(--ultra-transition-fast) !important;
+}
+
+a:hover {
+  transform: translateY(-1px);
+}
+
+/* Button improvements */
+.btn, button, input[type="submit"], input[type="button"] {
+  border-radius: var(--ultra-border-radius) !important;
+  font-weight: var(--ultra-font-weight-medium) !important;
+  transition: var(--ultra-transition-fast) !important;
+  border: none !important;
+  padding: var(--ultra-spacing-sm) var(--ultra-spacing-md) !important;
+  cursor: pointer !important;
+}
+
+.btn:hover, button:hover, input[type="submit"]:hover, input[type="button"]:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--ultra-shadow-lg);
+}
+
+/* Form improvements */
+input[type="text"], input[type="email"], input[type="password"], input[type="search"], 
+textarea, select {
+  border-radius: var(--ultra-border-radius) !important;
+  border: 2px solid transparent !important;
+  padding: var(--ultra-spacing-sm) var(--ultra-spacing-md) !important;
+  transition: var(--ultra-transition-fast) !important;
+  font-family: var(--ultra-font-family) !important;
+}
+
+input:focus, textarea:focus, select:focus {
+  outline: none !important;
+  transform: translateY(-1px);
+  box-shadow: var(--ultra-shadow-md);
+}
+
+/* Card-based layout improvements */
+.card, .block, .course-content, .section {
+  border-radius: var(--ultra-border-radius-large) !important;
+  overflow: hidden !important;
+  transition: var(--ultra-transition-normal) !important;
+  border: none !important;
+  box-shadow: var(--ultra-shadow-sm);
+}
+
+.card:hover, .block:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--ultra-shadow-xl);
+}
+
+/* Navigation improvements */
+.navbar, .navigation, .breadcrumb {
+  border-radius: var(--ultra-border-radius) !important;
+  backdrop-filter: blur(10px) !important;
+  box-shadow: var(--ultra-shadow-sm);
+}
+
+/* Content spacing improvements */
+.content-wrapper, .main-content, #page-wrapper {
+  padding: var(--ultra-spacing-lg) !important;
+}
+
+/* Modern scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(0, 0, 0, 0.2);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(0, 0, 0, 0.3);
+}
+
+/* Hide default Moodle styling that conflicts */
+.block .header .title h2,
+.block .header .title h3,
+.block .header .title h4 {
+  margin: 0 !important;
+  padding: 0 !important;
+}

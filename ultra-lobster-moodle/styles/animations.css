@@ -1,0 +1,60 @@
+/* Additional CSS for theme-specific animations and effects */
+
+/* Loading animations for different themes */
+@keyframes ultra-glow {
+  0%, 100% { box-shadow: 0 0 5px var(--ultra-accent-color); }
+  50% { box-shadow: 0 0 20px var(--ultra-accent-color), 0 0 30px var(--ultra-accent-color); }
+}
+
+@keyframes ultra-bounce {
+  0%, 20%, 53%, 80%, 100% { transform: translate3d(0,0,0); }
+  40%, 43% { transform: translate3d(0,-30px,0); }
+  70% { transform: translate3d(0,-15px,0); }
+  90% { transform: translate3d(0,-4px,0); }
+}
+
+@keyframes ultra-shake {
+  0%, 100% { transform: translateX(0); }
+  25% { transform: translateX(-2px); }
+  75% { transform: translateX(2px); }
+}
+
+/* Theme-specific enhancements */
+.ultra-theme-gummy .activity:hover {
+  animation: ultra-bounce 0.6s ease-out;
+}
+
+.ultra-theme-brutal .btn:active {
+  animation: ultra-shake 0.3s ease-out;
+}
+
+.ultra-theme-soft .card:hover {
+  animation: ultra-glow 2s ease-in-out infinite;
+}
+
+/* Enhanced accessibility */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+/* High contrast mode support */
+@media (prefers-contrast: high) {
+  :root {
+    --ultra-border-color: #000000 !important;
+    --ultra-text-primary: #000000 !important;
+    --ultra-card-bg: #ffffff !important;
+  }
+}
+
+/* Focus improvements for keyboard navigation */
+.ultra-focus-visible {
+  outline: 3px solid var(--ultra-accent-color) !important;
+  outline-offset: 2px !important;
+  border-radius: var(--ultra-border-radius-small) !important;
+}
