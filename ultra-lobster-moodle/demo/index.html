@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ultra Lobster for Moodle - Demo</title>
+  <link rel="stylesheet" href="../styles/base.css">
+  <link rel="stylesheet" href="../styles/components.css">
+  <link rel="stylesheet" href="../styles/themes/light.css">
+  <style>
+    body {
+      padding: 20px;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+    
+    .demo-header {
+      text-align: center;
+      margin-bottom: 40px;
+      padding: 40px 20px;
+      background: var(--ultra-accent-gradient);
+      color: var(--ultra-accent-text);
+      border-radius: var(--ultra-border-radius-large);
+    }
+    
+    .demo-section {
+      margin-bottom: 40px;
+    }
+    
+    .demo-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 20px;
+    }
+    
+    .theme-switcher {
+      position: fixed;
+      top: 20px;
+      right: 20px;
+      background: var(--ultra-card-bg);
+      border: 1px solid var(--ultra-border-color);
+      border-radius: var(--ultra-border-radius);
+      padding: 15px;
+      z-index: 1000;
+      box-shadow: var(--ultra-shadow-lg);
+    }
+    
+    .theme-buttons {
+      display: flex;
+      gap: 8px;
+      flex-wrap: wrap;
+    }
+    
+    .theme-btn {
+      padding: 6px 12px;
+      border: 1px solid var(--ultra-border-color);
+      border-radius: var(--ultra-border-radius-small);
+      background: var(--ultra-card-bg);
+      color: var(--ultra-text-primary);
+      cursor: pointer;
+      font-size: 12px;
+      transition: var(--ultra-transition-fast);
+    }
+    
+    .theme-btn:hover {
+      background: var(--ultra-accent-color);
+      color: var(--ultra-accent-text);
+    }
+    
+    .theme-btn.active {
+      background: var(--ultra-accent-gradient);
+      color: var(--ultra-accent-text);
+    }
+  </style>
+</head>
+<body class="ultra-lobster-enhanced">
+  <div class="theme-switcher">
+    <div style="margin-bottom: 10px; font-weight: 600; font-size: 12px;">Theme Preview:</div>
+    <div class="theme-buttons">
+      <button class="theme-btn active" data-theme="light">Light</button>
+      <button class="theme-btn" data-theme="dark">Dark</button>
+      <button class="theme-btn" data-theme="gummy">Gummy</button>
+      <button class="theme-btn" data-theme="brutal">Brutal</button>
+      <button class="theme-btn" data-theme="soft">Soft</button>
+    </div>
+  </div>
+
+  <header class="demo-header">
+    <h1>🦞 Ultra Lobster for Moodle</h1>
+    <p>Transform your Moodle LMS experience with modern, Obsidian-inspired themes</p>
+  </header>
+
+  <section class="demo-section">
+    <h2>Course Content Cards</h2>
+    <div class="demo-grid">
+      <div class="card section ultra-enhanced-section">
+        <div class="section-title">
+          <h3>Week 1: Introduction to Computer Science</h3>
+        </div>
+        <div class="content">
+          <div class="activity ultra-enhanced-activity">
+            <div class="activityname">📄 Lecture Notes - Chapter 1</div>
+            <p>Introduction to programming concepts and algorithms</p>
+          </div>
+          <div class="activity ultra-enhanced-activity">
+            <div class="activityname">🎥 Video Lecture - Basics</div>
+            <p>Watch the introductory video about computer science fundamentals</p>
+          </div>
+        </div>
+      </div>
+      
+      <div class="card section ultra-enhanced-section">
+        <div class="section-title">
+          <h3>Week 2: Data Structures</h3>
+        </div>
+        <div class="content">
+          <div class="activity ultra-enhanced-activity">
+            <div class="activityname">📚 Reading Material</div>
+            <p>Arrays, Lists, and Stack operations</p>
+          </div>
+          <div class="activity ultra-enhanced-activity">
+            <div class="activityname">💻 Lab Exercise</div>
+            <p>Implement basic data structures in Python</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="demo-section">
+    <h2>Enhanced Form Elements</h2>
+    <div class="demo-grid">
+      <div class="card">
+        <h3>Modern Forms</h3>
+        <form style="padding: 20px;">
+          <div style="margin-bottom: 16px;">
+            <label style="display: block; margin-bottom: 4px; font-weight: 500;">Course Name:</label>
+            <input type="text" placeholder="Enter course name" style="width: 100%;">
+          </div>
+          <div style="margin-bottom: 16px;">
+            <label style="display: block; margin-bottom: 4px; font-weight: 500;">Category:</label>
+            <select style="width: 100%;">
+              <option>Computer Science</option>
+              <option>Mathematics</option>
+            </select>
+          </div>
+          <button type="submit" class="btn" style="background: var(--ultra-accent-gradient); color: var(--ultra-accent-text);">
+            Save Course
+          </button>
+        </form>
+      </div>
+      
+      <div class="card">
+        <h3>Action Buttons</h3>
+        <div style="padding: 20px; display: flex; flex-direction: column; gap: 12px;">
+          <button class="btn" style="background: var(--ultra-success-gradient); color: var(--ultra-success-text);">
+            Submit Assignment
+          </button>
+          <button class="btn" style="background: var(--ultra-info-gradient); color: var(--ultra-info-text);">
+            View Details
+          </button>
+          <button class="btn" style="background: var(--ultra-warning-gradient); color: var(--ultra-warning-text);">
+            Save Draft
+          </button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <script>
+    // Theme switching functionality
+    const themeButtons = document.querySelectorAll('.theme-btn');
+    
+    themeButtons.forEach(button => {
+      button.addEventListener('click', () => {
+        const theme = button.dataset.theme;
+        
+        // Update active button
+        themeButtons.forEach(btn => btn.classList.remove('active'));
+        button.classList.add('active');
+        
+        // Remove existing theme
+        const existingLink = document.getElementById('theme-link');
+        if (existingLink) {
+          existingLink.remove();
+        }
+        
+        // Add new theme
+        const link = document.createElement('link');
+        link.id = 'theme-link';
+        link.rel = 'stylesheet';
+        link.href = `../styles/themes/${theme}.css`;
+        document.head.appendChild(link);
+        
+        // Update body class
+        document.body.className = `ultra-lobster-enhanced ultra-theme-${theme}`;
+      });
+    });
+  </script>
+</body>
+</html>
